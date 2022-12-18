@@ -52,4 +52,120 @@
   color: #fff;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.joinForm button:hover{
+  background: #02aa9f;
+}
+
+.chat{
+  height: 450px;
+  width: 300px;
+}
+
+.chatName{
+  height: 50px;
+  position: relative;
+  background: #02aa9f;
+  border-radius: 6px;
+}
+
+.chatName p{
+  display: block;
+  padding: 10px;
+  color: #fff;
+  font-weight: 550;
+}
+
+.chatMessages{
+  height: 450px;
+  border: 1px solid #00C6BA;
+  background: #fff;
+}
+
+.chatMessage{
+  height: auto;
+  display: flex;
+  padding: 10px;
+}
+
+.messageInfo{
+  display: flex;
+  font-size: 12px;
+}
+
+.messageInfo #author{
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+
+.chatMessage .messageContent{
+  min-height: 40px;
+  max-width: 120px;
+  width: auto;
+  height: auto;
+  color: #fff;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  align-items: center;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+  border-radius: 5px;
+}
+
+#userOne{
+  justify-content: flex-end;
+}
+
+#userOne .messageContent{
+  justify-content: flex-end;
+  background-color: #9f64ed
+}
+
+#userOne .messageInfo{
+  justify-content: flex-end;
+  margin-right: 5px;
+}
+
+#userTwo{
+  justify-content: flex-start;
+}
+
+#userTwo .messageContent{
+  justify-content: flex-start;
+  background-color: #6495ed;
+}
+
+#userTwo .messageInfo{
+  justify-content: flex-start;
+}
+
+.chatInput{
+  display: flex;
+  height: 40px;
+  border: 1px solid #263238;
+  border-top: none;
+}
+
+.chatInput input{
+  height: 100%;
+  flex: 85%;
+  pad: 0.7rem;
+  outline: none;
+  border: 0;
+}
+
+.chatInput button{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 15%;
+  cursor: pointer;
+  outline: none;
+  border: 0;
 }
