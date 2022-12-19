@@ -5,13 +5,16 @@
   padding: 0;
 }
 
+body{
+  background: #36393f;
+}
+
 .app{
   width: 100vw;
   height: 100vh;
   display: grid;
-  place-items: center;
+  place-content: center;
   font-family: "Open Sans", sans-serif;
-  background: #36393f;
 }
 
 .joinForm{
@@ -60,8 +63,9 @@
 }
 
 .chat{
-  height: 450px;
+  height: 600px;
   width: 300px;
+
 }
 
 .chatName{
@@ -69,13 +73,23 @@
   position: relative;
   background: #02aa9f;
   border-radius: 6px;
+  display: flex;
 }
 
 .chatName p{
-  display: block;
-  padding: 10px;
+  padding: 14px;
   color: #fff;
-  font-weight: 550;
+  font-weight: 500;
+}
+
+#roomName{
+  flex: 72%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#liveChat{
+  flex: 28%;
 }
 
 .chatMessages{
@@ -83,6 +97,17 @@
   border: 1px solid #00C6BA;
   background: #fff;
 }
+
+.messagesList{
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.messagesList::-webkit-scrollbar{
+  display: none;
+ }
 
 .chatMessage{
   height: auto;
@@ -97,12 +122,13 @@
 
 .messageInfo #author{
   margin-left: 10px;
+  margin-right: 3px;
   font-weight: bold;
 }
 
 
 .chatMessage .messageContent{
-  min-height: 40px;
+  min-height: 26px;
   max-width: 120px;
   width: auto;
   height: auto;
@@ -123,7 +149,7 @@
 
 #userOne .messageContent{
   justify-content: flex-end;
-  background-color: #9f64ed
+  background-color: #8659B5
 }
 
 #userOne .messageInfo{
@@ -137,7 +163,7 @@
 
 #userTwo .messageContent{
   justify-content: flex-start;
-  background-color: #6495ed;
+  background-color: #009CE0;
 }
 
 #userTwo .messageInfo{
@@ -161,6 +187,8 @@
 
 .chatInput button{
   height: 100%;
+  background: white;
+  color: #00C6BA;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -168,4 +196,9 @@
   cursor: pointer;
   outline: none;
   border: 0;
+}
+
+
+.chatInput button:hover{
+  color: #009CE0;
 }

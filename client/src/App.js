@@ -10,10 +10,12 @@ const App = () => {
   const [roomId, setRoomId] = useState("");
   const [inChat, setInChat] = useState(false);
 
+  //On form submit join to the chat with a specific room Id
   const joinChatRoom = (e) => {
     e.preventDefault();
     if(username !== "" && roomId !== ""){
       socket.emit("join_chat", roomId)
+      //If this state is equal to true display chat
       setInChat(true)
     }
   }
@@ -24,8 +26,8 @@ const App = () => {
         <div className='joinForm'>
         <h3>Join a chat room</h3>
         <form onSubmit={joinChatRoom}>
-          <input type="text" placeholder="Username..." onChange={(e) => {setUsername(e.target.value)}}/>
-          <input type="text" placeholder="Room id..." onChange={(e) => {setRoomId(e.target.value)}}/>
+          <input type="text" placeholder="Username..." maxLength={12} onChange={(e) => {setUsername(e.target.value)}}/>
+          <input type="text" placeholder="Room id..." maxLength={12} onChange={(e) => {setRoomId(e.target.value)}}/>
           <button type="submit">Join</button>
         </form>
       </div>
